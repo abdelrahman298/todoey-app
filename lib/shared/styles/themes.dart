@@ -42,43 +42,49 @@
 //   ),
 //
 // );
-//
-// ThemeData lightTheme = ThemeData(
-//   primarySwatch: defaultColor,
-//   scaffoldBackgroundColor: Colors.white,
-//   appBarTheme: const AppBarTheme(
-//     titleSpacing: 20.0,
-//     backwardsCompatibility: false,
-//     systemOverlayStyle: SystemUiOverlayStyle(
-//       statusBarColor: Colors.white,
-//       statusBarIconBrightness: Brightness.dark,
-//     ),
-//     backgroundColor: Colors.white,
-//     elevation: 0.0,
-//     titleTextStyle: TextStyle(
-//       fontFamily: 'Jannah',
-//       color: Colors.black,
-//       fontSize: 20.0,
-//       fontWeight: FontWeight.bold,
-//       height: 1.0,
-//     ),
-//     iconTheme: IconThemeData(
-//       color: Colors.black,
-//     ),
-//   ),
-//   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-//     type: BottomNavigationBarType.fixed,
-//     selectedItemColor: defaultColor,
-//     unselectedItemColor: Colors.grey,
-//     elevation: 20.0,
-//     backgroundColor: Colors.white,
-//   ),
-//   textTheme: const TextTheme(
-//     bodyText1: TextStyle(
-//       fontSize: 18.0,
-//       fontWeight: FontWeight.w600,
-//       color: Colors.black,
-//     ),
-//   ),
-//   fontFamily: 'Jannah',
-// );
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:whatsapp_clone/shared/styles/colors.dart';
+import 'package:hexcolor/hexcolor.dart';
+
+ThemeData lightTheme = ThemeData(
+  primarySwatch: defaultColor,
+  scaffoldBackgroundColor: Colors.white,
+  appBarTheme: const AppBarTheme(
+    titleSpacing: 20.0,
+    backwardsCompatibility: false,
+    //دى مسئولة عن الجزء بتاع الساعة و ال battery و الوانهم
+    systemOverlayStyle: SystemUiOverlayStyle(
+      statusBarColor: Colors.white,
+      statusBarIconBrightness: Brightness.dark,
+    ),
+    // backgroundColor: HexColor("#f2f2f2"),
+    elevation: 0.0,
+    titleTextStyle: TextStyle(
+      fontFamily: 'Jannah',
+      color: Colors.black,
+      fontSize: 20.0,
+      fontWeight: FontWeight.bold,
+      height: 1.0,
+    ),
+    iconTheme: IconThemeData(
+      color: Colors.black,
+    ),
+  ),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    type: BottomNavigationBarType.fixed,
+    selectedItemColor: defaultColor,
+    unselectedItemColor: Colors.grey,
+    elevation: 20.0,
+    backgroundColor: Colors.white,
+  ),
+  textTheme: const TextTheme(
+    bodyText1: TextStyle(
+      fontSize: 18.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    ),
+  ),
+  fontFamily: 'Jannah',
+);
