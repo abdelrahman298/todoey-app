@@ -450,3 +450,14 @@
 //         ),
 //       ),
 //     );
+
+
+import 'package:flutter/material.dart';
+
+void navigateAndFinish(context,widget) => Navigator.pushAndRemoveUntil(
+  context,
+  MaterialPageRoute(
+    builder: (BuildContext context) => widget,
+  ),
+      (route) => false,
+);

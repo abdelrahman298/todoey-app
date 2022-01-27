@@ -1,90 +1,91 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-// import 'package:hexcolor/hexcolor.dart';
-// import 'package:social_app/shared/styles/colors.dart';
-//
-// ThemeData darkTheme = ThemeData(
-//   primarySwatch: defaultColor,
-//   scaffoldBackgroundColor: HexColor('333739'),
-//   appBarTheme: AppBarTheme(
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:todoey_app/shared/styles/colors.dart';
+
+// ThemeData lightTheme = ThemeData(
+//   primarySwatch: defaultColor as MaterialColor,
+//   scaffoldBackgroundColor: Colors.white,
+//   appBarTheme:  const AppBarTheme(
 //     titleSpacing: 20.0,
 //     backwardsCompatibility: false,
+//     //دى مسئولة عن الجزء بتاع الساعة و ال battery و الوانهم
 //     systemOverlayStyle: SystemUiOverlayStyle(
-//       statusBarColor: HexColor('333739'),
-//       statusBarIconBrightness: Brightness.light,
+//       statusBarColor: Colors.blue,
+//       statusBarIconBrightness: Brightness.dark,
 //     ),
-//     backgroundColor: HexColor('333739'),
+//     backgroundColor: Colors.white,
 //     elevation: 0.0,
-//     titleTextStyle: const TextStyle(
+//     titleTextStyle: TextStyle(
 //       fontFamily: 'Jannah',
-//       color: Colors.white,
+//       color: Colors.black,
 //       fontSize: 20.0,
 //       fontWeight: FontWeight.bold,
 //       height: 1.0,
 //     ),
-//     iconTheme: const IconThemeData(
-//       color: Colors.white,
+//     iconTheme: IconThemeData(
+//       color: Colors.black,
 //     ),
 //   ),
-//   bottomNavigationBarTheme: BottomNavigationBarThemeData(
+//   bottomNavigationBarTheme:  BottomNavigationBarThemeData(
 //     type: BottomNavigationBarType.fixed,
-//     selectedItemColor: defaultColor,
+//     selectedItemColor: defaultColor as MaterialColor,
 //     unselectedItemColor: Colors.grey,
 //     elevation: 20.0,
-//     backgroundColor: HexColor('333739'),
+//     backgroundColor: Colors.white,
 //   ),
 //   textTheme: const TextTheme(
 //     bodyText1: TextStyle(
 //       fontSize: 18.0,
 //       fontWeight: FontWeight.w600,
-//       color: Colors.white,
+//       color: Colors.black,
 //     ),
 //   ),
-//
+//   fontFamily: 'Jannah',
 // );
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:whatsapp_clone/shared/styles/colors.dart';
-import 'package:hexcolor/hexcolor.dart';
-
-ThemeData lightTheme = ThemeData(
-  primarySwatch: defaultColor,
-  scaffoldBackgroundColor: Colors.white,
-  appBarTheme: const AppBarTheme(
+ThemeData darkTheme = ThemeData(
+  scaffoldBackgroundColor: defaultColor,
+  appBarTheme: AppBarTheme(
     titleSpacing: 20.0,
     backwardsCompatibility: false,
-    //دى مسئولة عن الجزء بتاع الساعة و ال battery و الوانهم
     systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: Colors.white,
-      statusBarIconBrightness: Brightness.dark,
+      statusBarColor: defaultColor,
+      statusBarIconBrightness: Brightness.light,
     ),
-    // backgroundColor: HexColor("#f2f2f2"),
+    backgroundColor: defaultColor,
     elevation: 0.0,
-    titleTextStyle: TextStyle(
+    titleTextStyle: const TextStyle(
       fontFamily: 'Jannah',
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 20.0,
       fontWeight: FontWeight.bold,
       height: 1.0,
     ),
-    iconTheme: IconThemeData(
-      color: Colors.black,
+    iconTheme: const IconThemeData(
+      color: Colors.white,
     ),
   ),
-  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
     selectedItemColor: defaultColor,
     unselectedItemColor: Colors.grey,
     elevation: 20.0,
-    backgroundColor: Colors.white,
+    backgroundColor: HexColor('333739'),
   ),
   textTheme: const TextTheme(
-    bodyText1: TextStyle(
-      fontSize: 18.0,
+    bodyText2: TextStyle(
+      // fontSize: 26.0,
       fontWeight: FontWeight.w600,
-      color: Colors.black,
+      color: Colors.white,
     ),
   ),
-  fontFamily: 'Jannah',
+  textButtonTheme: TextButtonThemeData(
+    style: TextButton.styleFrom(
+      primary: Colors.white,
+    ),
+  ),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: defaultColor,
+  ),
 );
