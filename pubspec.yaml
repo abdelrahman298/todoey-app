@@ -1,4 +1,4 @@
-name: whatsapp_clone
+name: todoey_app
 description: A new Flutter project designed by abdelrahman
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -15,6 +15,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   hexcolor: ^2.0.5
+  shared_preferences: ^2.0.12
+  smooth_page_indicator: ^1.0.0+2
 
 
 dev_dependencies:
