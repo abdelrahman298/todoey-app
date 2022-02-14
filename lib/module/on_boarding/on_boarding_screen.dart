@@ -62,11 +62,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             },
             child: const Text(
               'Skip',
-              style: TextStyle(),
             ),
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
-                const Color(0xFF031956).withOpacity(0.1),
+                const Color(0xFF031956).withOpacity(0.5),
               ),
             ),
           ),
@@ -98,7 +97,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 SmoothPageIndicator(
                   controller: pageController, // PageController
                   count: boarding.length,
-                  effect: const ExpandingDotsEffect(), // your preferred effect
+                  effect: ExpandingDotsEffect(activeDotColor: defaultColor), // your preferred effect
                 ),
                 const Spacer(),
                 FloatingActionButton(

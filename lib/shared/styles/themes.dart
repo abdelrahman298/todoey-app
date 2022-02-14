@@ -45,15 +45,15 @@ import 'package:todoey_app/shared/styles/colors.dart';
 // );
 
 ThemeData darkTheme = ThemeData(
-  scaffoldBackgroundColor: defaultColor,
+  scaffoldBackgroundColor: backgroundColor,
   appBarTheme: AppBarTheme(
     titleSpacing: 20.0,
     backwardsCompatibility: false,
     systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: defaultColor,
+      statusBarColor: backgroundColor,
       statusBarIconBrightness: Brightness.light,
     ),
-    backgroundColor: defaultColor,
+    backgroundColor: backgroundColor,
     elevation: 0.0,
     titleTextStyle: const TextStyle(
       fontFamily: 'Jannah',
@@ -71,13 +71,13 @@ ThemeData darkTheme = ThemeData(
     selectedItemColor: defaultColor,
     unselectedItemColor: Colors.grey,
     elevation: 20.0,
-    backgroundColor: HexColor('333739'),
+    backgroundColor: HexColor('344FA1'),
   ),
   textTheme: const TextTheme(
     bodyText2: TextStyle(
-      // fontSize: 26.0,
+      fontSize: 26.0,
       fontWeight: FontWeight.w600,
-      color: Colors.white,
+      color: Colors.black,
     ),
   ),
   textButtonTheme: TextButtonThemeData(

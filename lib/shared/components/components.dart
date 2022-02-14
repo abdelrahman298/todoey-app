@@ -451,13 +451,110 @@
 //       ),
 //     );
 
-
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
-void navigateAndFinish(context,widget) => Navigator.pushAndRemoveUntil(
-  context,
-  MaterialPageRoute(
-    builder: (BuildContext context) => widget,
-  ),
+void navigateAndFinish(context, widget) => Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => widget,
+      ),
       (route) => false,
-);
+    );
+
+Widget defaultTextForm({
+  required TextInputType? keyboardType,
+  required TextEditingController? controller,
+  Widget? prefixIcon,
+  Widget? suffixIcon,
+  required String? label,
+  required Function(String)? onSubmitted,
+  Function(String)? onChanged,
+  required String? Function(String?)? validate,
+}) =>
+    TextFormField(
+      keyboardType: keyboardType,
+      controller: controller,
+      decoration: InputDecoration(
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
+          labelText: label,
+          floatingLabelStyle: const TextStyle(color: Colors.black),
+          labelStyle: TextStyle(
+            color: Colors.black.withOpacity(0.5),
+
+          )),
+      onFieldSubmitted: onSubmitted,
+      onChanged: onChanged,
+      validator: validate,
+    );
+
+
+Widget defaultButton({
+  double width = double.infinity,
+  Color backgroundColor = Colors.blue,
+  bool isUpperCase = true,
+  double radius = 15,
+  required Function() onPressed,
+  required String text,
+}) =>
+    Container(
+      width: width,
+      height: 50.0,
+      child: MaterialButton(
+        onPressed: onPressed,
+        child: Text(
+          isUpperCase ? text.toUpperCase() : text,
+          style: const TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(
+          radius,
+        ),
+        color: backgroundColor,
+      ),
+    );
+
+
+// void signOut(context) {
+//   CacheHelper.removeData(key: 'token').then((value) {
+//     if (value) {
+//       navigateAndFinish(context, ShopLoginScreen());
+//     }
+//   });
+// }
+
+void showToast({
+  required String text,
+  required ToastStates state,
+}) {
+  Fluttertoast.showToast(
+      msg: text,
+      toastLength: Toast.LENGTH_LONG,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 3,
+      backgroundColor: chooseColor(state),
+      textColor: Colors.white,
+      fontSize: 16.0);
+}
+
+enum ToastStates { SUCCESS, ERROR, WARNING }
+
+Color chooseColor(ToastStates state) {
+  Color color;
+  switch (state) {
+    case ToastStates.SUCCESS:
+      return color = Colors.green;
+      break;
+    case ToastStates.ERROR:
+      return color = Colors.red;
+      break;
+    case ToastStates.WARNING:
+      return color = Colors.amber;
+      break;
+  }
+  return color;
+}
